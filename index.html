@@ -1,0 +1,355 @@
+<!DOCTYPE html><html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Brutorios</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Russo+One&family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"/>
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      font-family: 'Montserrat', sans-serif;
+      margin: 0;
+      background-color: #121212;
+      color: #f0f0f0;
+      line-height: 1.6;
+    }
+    header {
+      background: linear-gradient(90deg, #000, #222);
+      color: #fff;
+      padding: 40px 20px;
+      text-align: center;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.5);
+    }
+    header h1 {
+      font-family: 'Russo One', sans-serif;
+      font-size: 2.5em;
+      margin: 0;
+      letter-spacing: 2px;
+    }
+    h3 {
+      font-family: 'Russo One', sans-serif;
+      font-size: 2.5em;
+      margin: 0;
+      letter-spacing: 2px;
+    }
+    header p { font-size: 1.2em; margin-top: 10px; }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+      gap: 20px;
+      padding: 30px;
+    }
+    .item {
+      background: #1e1e1e;
+      padding: 16px;
+      border-radius: 16px;
+      text-align: center;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+      transition: transform 0.2s ease;
+    }
+    .item:hover { transform: translateY(-5px); }
+    .swiper {
+      width: 100%;
+      height: auto;
+      border-radius: 12px;
+      margin-bottom: 12px;
+      overflow: hidden;
+    }
+    .swiper-slide img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+    h3 { font-size: 1.1em; margin: 10px 0 5px; }
+    .btn {
+      margin-top: 12px;
+      padding: 10px;
+      background: #25d366;
+      color: white;
+      font-weight: 600;
+      border: none;
+      border-radius: 8px;
+      width: 100%;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+    .btn:hover { background: #1ebc59; }
+    #detalleVista {
+      display: none;
+      padding: 40px 20px;
+      max-width: 700px;
+      margin: auto;
+      text-align: center;
+    }
+    .swiper-detalle {
+      width: 100%;
+      margin-bottom: 20px;
+      border-radius: 16px;
+      overflow: hidden;
+    }
+    .swiper-button-next, .swiper-button-prev { color: white; }
+    strong { color: #ddd; }
+    @media (max-width: 500px) {
+      header h1 { font-size: 2em; }
+      .grid { padding: 20px 10px; }
+    }
+  </style>
+</head>
+<body>
+<header>
+  <h1>Brutorius</h1>
+  <h1 style="font-size: 20px;">La Indumentaria Del Momento</h1>
+  <h1 style="font-size: 15px;">Catalogo</h1>
+</header>
+<div id="vistaCatalogo">
+  <div class="grid">
+    <!-- PRODUCTOS: Se agregan todos los productos con misma estructura -->
+    <!-- Copiar y pegar los bloques de producto desde el último mensaje -->
+    <!-- dentro del <div class="grid"> -->
+<div class="item">
+  <div class="swiper">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide"><img src="https://i.imgur.com/XGTr0A9.png" alt="Buzo"></div>
+      <div class="swiper-slide"><img src="https://i.imgur.com/G921I2k.png" alt="Buzo 2"></div>
+    </div>
+    <div class="swiper-button-next"></div>
+    <div class="swiper-button-prev"></div>
+  </div>
+  <h3>Buzo Oversize Negro</h3>
+  <h3 style="font-size: 15px;">talles S, M, L, XL</h3>
+  <button class="btn" onclick="verProducto('buzo')">Ver más</button>
+</div>
+
+<div class="item">
+  <div class="swiper">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide"><img src="https://imgur.com/sU4MKHS.jpeg" alt="Pantalón"></div>
+      <div class="swiper-slide"><img src="https://imgur.com/8xVTx7g.jpeg" alt="Pantalón 2"></div>
+    </div>
+    <div class="swiper-button-next"></div>
+    <div class="swiper-button-prev"></div>
+  </div>
+  <h3>Pantalón Baggie Negro</h3>
+  <h3 style="font-size: 15px;">Talle Unico</h3>
+  <button class="btn" onclick="verProducto('pantalon')">Ver más</button>
+</div>
+
+<div class="item">
+  <div class="swiper">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide"><img src="https://imgur.com/KPnlw0e.jpeg" alt="Remera"></div>
+      <div class="swiper-slide"><img src="https://i.imgur.com/PDIr4Yq.jpeg" alt="Remera 2"></div>
+    </div>
+    <div class="swiper-button-next"></div>
+    <div class="swiper-button-prev"></div>
+  </div>
+  <h3>Remera Oversize Beige</h3>
+  <h3 style="font-size: 15px;">talles S, M, L, XL</h3>
+  <button class="btn" onclick="verProducto('remera')">Ver más</button>
+</div>
+
+<!-- PRODUCTO NUEVO 1 -->
+<div class="item">
+  <div class="swiper">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide"><img src="https://imgur.com/iYx8Z7u.jpeg" alt="Camisa Leñadora"></div>
+      <div class="swiper-slide"><img src="https://imgur.com/7Ig7bdw.jpeg" alt="Camisa Leñadora 2"></div>
+    </div>
+    <div class="swiper-button-next"></div>
+    <div class="swiper-button-prev"></div>
+  </div>
+  <h3>Buzo Oversize </h3>
+  <h3>Gris</h3>
+  <h3 style="font-size: 15px;">Talles S, M, L, XL</h3>
+  <button class="btn" onclick="verProducto('camisa')">Ver más</button>
+</div>
+
+<!-- PRODUCTO NUEVO 2 -->
+<div class="item">
+  <div class="swiper">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide"><img src="https://imgur.com/ON0SjGR.jpeg" alt="Short Cargo"></div>
+      <div class="swiper-slide"><img src="https://imgur.com/QVKaUsT.jpeg" alt="Short Cargo 2"></div>
+    </div>
+    <div class="swiper-button-next"></div>
+    <div class="swiper-button-prev"></div>
+  </div>
+  <h3>Buzo Oversize Negro</h3>
+  <h3 style="font-size: 15px;">Talles S, M, L,XL</h3>
+  <button class="btn" onclick="verProducto('short')">Ver más</button>
+</div>
+
+<!-- PRODUCTO NUEVO 3 -->
+<div class="item">
+  <div class="swiper">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide"><img src="https://imgur.com/NOh6Txr.jpeg" alt="Campera Corta Viento"></div>
+      <div class="swiper-slide"><img src="https://imgur.com/ShtxLuP.jpeg" alt="Campera Corta Viento 2"></div>
+    </div>
+    <div class="swiper-button-next"></div>
+    <div class="swiper-button-prev"></div>
+  </div>
+  <h3>Remera Beige</h3>
+  <h3>Claro</h3>
+  <h3 style="font-size: 15px;">Talles S, M, L, XL</h3>
+  <button class="btn" onclick="verProducto('campera')">Ver más</button>
+</div>
+
+<!-- PRODUCTO NUEVO 4 -->
+<div class="item">
+  <div class="swiper">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide"><img src="https://i.imgur.com/gLGywbW.jpeg" alt="Gorra Negra"></div>
+      <div class="swiper-slide"><img src="https://i.imgur.com/Tf6kXPA.jpeg" alt="Gorra Negra 2"></div>
+    </div>
+    <div class="swiper-button-next"></div>
+    <div class="swiper-button-prev"></div>
+  </div>
+  <h3>Producto nuevo 4</h3>
+  <button class="btn" onclick="verProducto('gorra')">Ver más</button>
+</div>
+
+<!-- PRODUCTO NUEVO 5 -->
+<div class="item">
+  <div class="swiper">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide"><img src="https://i.imgur.com/wxv3c2x.jpeg" alt="Jean Recto"></div>
+      <div class="swiper-slide"><img src="https://i.imgur.com/C9wvnFw.jpeg" alt="Jean Recto 2"></div>
+    </div>
+    <div class="swiper-button-next"></div>
+    <div class="swiper-button-prev"></div>
+  </div>
+  <h3>Producto nuevo 5</h3>
+  <button class="btn" onclick="verProducto('jean')">Ver más</button>
+</div>
+
+<!-- PRODUCTO NUEVO 6 -->
+<div class="item">
+  <div class="swiper">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide"><img src="https://i.imgur.com/muLUNsI.jpeg" alt="Musculosa"></div>
+      <div class="swiper-slide"><img src="https://i.imgur.com/YEVp3hA.jpeg" alt="Musculosa 2"></div>
+    </div>
+    <div class="swiper-button-next"></div>
+    <div class="swiper-button-prev"></div>
+  </div>
+  <h3>Producto nuevo 6</h3>
+  <button class="btn" onclick="verProducto('musculosa')">Ver más</button>
+</div>
+  </div>
+</div>
+<p style="text-align: center;">Contactanos 👇</p>
+<div style="text-align: center;">
+  <a href="https://www.instagram.com/brutorius_store?igsh=ZWZscms1ZDVwdWpz">@brutorius_store</a>
+</div>
+<p style="text-align: center;">Brutorius Company</p>
+<div id="detalleVista">
+  <div class="swiper swiper-detalle">
+    <div class="swiper-wrapper" id="swiperDetalle"></div>
+    <div class="swiper-button-next"></div>
+    <div class="swiper-button-prev"></div>
+  </div>
+  <h2 id="nombreProd"></h2>
+  <p><strong>Precio:</strong> <span id="precioProd"></span></p>
+  <p><strong>Material:</strong> <span id="materialProd"></span></p>
+  <p><strong>Detalles:</strong> <span id="detalleProd"></span></p>
+  <p><strong>Estilo:</strong> Oversize / Urbano</p>
+  <button class="btn" onclick="volverCatalogo()">Volver</button>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+<script>
+  const productos = {
+    buzo: {
+      nombre: "Buzo Oversize Gris",
+      precio: "$25.000",
+      material: "Algodón suave y rellenos de friza",
+      detalles: "Estampados con termo fusión",
+      imagenes: ["https://imgur.com/Z3o5jkY.jpeg", "https://imgur.com/Dh5cIEn.jpeg"]
+    },
+    pantalon: {
+      nombre: "Pantalón Baggie",
+      precio: "$30.000",
+      material: "Tela de jean",
+      detalles: "Diseños bordados a máquina",
+      imagenes: ["https://imgur.com/sU4MKHS.jpeg", "https://imgur.com/8xVTx7g.jpeg"]
+    },
+    remera: {
+      nombre: "Remera Oversize Beige",
+      precio: "$18.000",
+      material: "Tela liviana y fresca",
+      detalles: "Cuello y costuras reforzadas",
+      imagenes: ["https://imgur.com/KPnlw0e.jpeg", "https://i.imgur.com/PDIr4Yq.jpeg"]
+    },
+    camisa: {
+      nombre: "Buzo Oversize gris",
+      precio: "$27.000",
+      material: "Algodon suave y rellenos de friza",
+      detalles: "estampado con termo fusion",
+      imagenes: ["https://imgur.com/iYx8Z7u.jpeg", "https://imgur.com/7Ig7bdw.jpeg"]
+    },
+    short: {
+      nombre: "Buzo Oversize Negro",
+      precio: "$20.000",
+      material: "Algodon suave y relleno de friza",
+      detalles: "Estampado con termo fusion ",
+      imagenes: ["https://imgur.com/ON0SjGR.jpeg", "https://imgur.com/QVKaUsT.jpeg"]
+    },
+    campera: {
+      nombre: "Remera Beige Claro",
+      precio: "$32.000",
+      material: "Tela liviana y fresca",
+      detalles: "cuello y costuras reforzadas",
+      imagenes: ["https://imgur.com/NOh6Txr.jpeg", "https://imgur.com/ShtxLuP.jpeg"]
+    },
+    gorra: {
+      nombre: "Gorra Negra Brutorius",
+      precio: "$12.000",
+      material: "Algodón con broche ajustable",
+      detalles: "Logo bordado al frente",
+      imagenes: ["https://i.imgur.com/gLGywbW.jpeg", "https://i.imgur.com/Tf6kXPA.jpeg"]
+    },
+    jean: {
+      nombre: "Jean Recto Celeste",
+      precio: "$29.000",
+      material: "Denim clásico",
+      detalles: "Corte recto, lavado claro",
+      imagenes: ["https://i.imgur.com/wxv3c2x.jpeg", "https://i.imgur.com/C9wvnFw.jpeg"]
+    },
+    musculosa: {
+      nombre: "Musculosa Brutorius",
+      precio: "$15.000",
+      material: "Algodón peinado",
+      detalles: "Estampa al frente, sisas amplias",
+      imagenes: ["https://i.imgur.com/muLUNsI.jpeg", "https://i.imgur.com/YEVp3hA.jpeg"]
+    }
+  };document.querySelectorAll('.swiper').forEach((el) => { new Swiper(el, { loop: true, navigation: { nextEl: el.querySelector('.swiper-button-next'), prevEl: el.querySelector('.swiper-button-prev') } }); });
+
+function verProducto(tipo) { const prod = productos[tipo]; document.getElementById('nombreProd').innerText = prod.nombre; document.getElementById('precioProd').innerText = prod.precio; document.getElementById('materialProd').innerText = prod.material; document.getElementById('detalleProd').innerText = prod.detalles;
+
+const swiperDetalle = document.getElementById('swiperDetalle');
+swiperDetalle.innerHTML = '';
+prod.imagenes.forEach(src => {
+  const slide = document.createElement('div');
+  slide.className = 'swiper-slide';
+  slide.innerHTML = `<img src="${src}" alt="${prod.nombre}">`;
+  swiperDetalle.appendChild(slide);
+});
+
+document.getElementById('vistaCatalogo').style.display = 'none';
+document.getElementById('detalleVista').style.display = 'block';
+
+new Swiper('.swiper-detalle', {
+  loop: true,
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev'
+  }
+});
+
+}
+
+function volverCatalogo() { document.getElementById('detalleVista').style.display = 'none'; document.getElementById('vistaCatalogo').style.display = 'block'; } </script>
+
+</body>
+</html>
