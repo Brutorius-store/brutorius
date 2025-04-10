@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="https://fonts.googleapis.com/css2?family=Russo+One&family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"/>
+  <link rel="stylesheet" href="style.css">
   <style>
     * { box-sizing: border-box; }
     body {
@@ -35,13 +36,13 @@
     }
     header p { font-size: 1.2em; margin-top: 10px; }
     .grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  max-width: 1000px; /* 200px x 4 */
-  margin: 0 auto;
-  gap: 20px;
-  padding: 30px;
-    }
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    max-width: 1000px; /* máximo 4 columnas de 250px */
+    margin: 0 auto; /* centrado horizontal */
+    gap: 20px;
+    padding: 30px;
+  }
     .item {
       background: #1e1e1e;
       padding: 16px;
@@ -161,8 +162,7 @@
     <div class="swiper-button-next"></div>
     <div class="swiper-button-prev"></div>
   </div>
-  <h3>Buzo Oversize </h3>
-  <h3>Gris</h3>
+  <h3>Buzo Oversize Gris</h3>
   <h3 style="font-size: 15px;">Talles S, M, L, XL</h3>
   <button class="btn" onclick="verProducto('camisa')">Ver más</button>
 </div>
@@ -192,8 +192,7 @@
     <div class="swiper-button-next"></div>
     <div class="swiper-button-prev"></div>
   </div>
-  <h3>Remera Beige</h3>
-  <h3>Claro</h3>
+  <h3>Remera Beige Claro</h3>
   <h3 style="font-size: 15px;">Talles S, M, L, XL</h3>
   <button class="btn" onclick="verProducto('campera')">Ver más</button>
 </div>
@@ -202,13 +201,14 @@
 <div class="item">
   <div class="swiper">
     <div class="swiper-wrapper">
-      <div class="swiper-slide"><img src="https://i.imgur.com/gLGywbW.jpeg" alt="Gorra Negra"></div>
-      <div class="swiper-slide"><img src="https://i.imgur.com/Tf6kXPA.jpeg" alt="Gorra Negra 2"></div>
+      <div class="swiper-slide"><img src="https://i.imgur.com/iNMhhQe.jpeg" alt="Gorra Negra"></div>
+      <div class="swiper-slide"><img src="https://i.imgur.com/oobzdS0.jpeg" alt="Gorra Negra 2"></div>
     </div>
     <div class="swiper-button-next"></div>
     <div class="swiper-button-prev"></div>
   </div>
-  <h3>Producto nuevo 4</h3>
+  <h3>Remera Oversize Azul</h3>
+  <h3 style="font-size: 15px;">Talles S, M, L, XL</h3>
   <button class="btn" onclick="verProducto('gorra')">Ver más</button>
 </div>
 
@@ -216,13 +216,14 @@
 <div class="item">
   <div class="swiper">
     <div class="swiper-wrapper">
-      <div class="swiper-slide"><img src="https://i.imgur.com/wxv3c2x.jpeg" alt="Jean Recto"></div>
-      <div class="swiper-slide"><img src="https://i.imgur.com/C9wvnFw.jpeg" alt="Jean Recto 2"></div>
+      <div class="swiper-slide"><img src="https://i.imgur.com/yY7IRbM.jpeg" alt="Jean Recto"></div>
+      <div class="swiper-slide"><img src="https://i.imgur.com/rpsdyus.jpeg" alt="Jean Recto 2"></div>
     </div>
     <div class="swiper-button-next"></div>
     <div class="swiper-button-prev"></div>
   </div>
-  <h3>Producto nuevo 5</h3>
+  <h3>Remera Oversize Negra</h3>
+  <h3 style="font-size: 15px;">Talles S, M, L, XL</h3>
   <button class="btn" onclick="verProducto('jean')">Ver más</button>
 </div>
 
@@ -230,13 +231,14 @@
 <div class="item">
   <div class="swiper">
     <div class="swiper-wrapper">
-      <div class="swiper-slide"><img src="https://i.imgur.com/muLUNsI.jpeg" alt="Musculosa"></div>
-      <div class="swiper-slide"><img src="https://i.imgur.com/YEVp3hA.jpeg" alt="Musculosa 2"></div>
+      <div class="swiper-slide"><img src="https://i.imgur.com/TwXfFNi.png" alt="Musculosa"></div>
+      <div class="swiper-slide"><img src="https://i.imgur.com/r5PsBBh.png" alt="Musculosa 2"></div>
     </div>
     <div class="swiper-button-next"></div>
     <div class="swiper-button-prev"></div>
   </div>
-  <h3>Producto nuevo 6</h3>
+  <h3>Remera Oversize Negra</h3>
+  <h3 style="font-size: 15px;">Talles S, M, L, XL</h3>
   <button class="btn" onclick="verProducto('musculosa')">Ver más</button>
 </div>
   </div>
@@ -305,21 +307,21 @@
       imagenes: ["https://imgur.com/NOh6Txr.jpeg", "https://imgur.com/ShtxLuP.jpeg"]
     },
     gorra: {
-      nombre: "Gorra Negra Brutorius",
+      nombre: "Remera Oversize Azul",
       precio: "$12.000",
       material: "Algodón con broche ajustable",
       detalles: "Logo bordado al frente",
       imagenes: ["https://i.imgur.com/gLGywbW.jpeg", "https://i.imgur.com/Tf6kXPA.jpeg"]
     },
     jean: {
-      nombre: "Jean Recto Celeste",
+      nombre: "Remera Oversize Negra",
       precio: "$29.000",
       material: "Denim clásico",
       detalles: "Corte recto, lavado claro",
       imagenes: ["https://i.imgur.com/wxv3c2x.jpeg", "https://i.imgur.com/C9wvnFw.jpeg"]
     },
     musculosa: {
-      nombre: "Musculosa Brutorius",
+      nombre: "Remera Oversize Negra",
       precio: "$15.000",
       material: "Algodón peinado",
       detalles: "Estampa al frente, sisas amplias",
