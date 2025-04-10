@@ -42,21 +42,21 @@ const productos = {
       imagenes: ["https://imgur.com/NOh6Txr.jpeg", "https://imgur.com/ShtxLuP.jpeg"]
     },
     gorra: {
-      nombre: "Remera Oversize Azul",
+      nombre: "Gorra Negra Brutorius",
       precio: "$12.000",
       material: "Algodón con broche ajustable",
       detalles: "Logo bordado al frente",
       imagenes: ["https://i.imgur.com/gLGywbW.jpeg", "https://i.imgur.com/Tf6kXPA.jpeg"]
     },
     jean: {
-      nombre: "Remera Oversize Negra",
+      nombre: "Jean Recto Celeste",
       precio: "$29.000",
       material: "Denim clásico",
       detalles: "Corte recto, lavado claro",
       imagenes: ["https://i.imgur.com/wxv3c2x.jpeg", "https://i.imgur.com/C9wvnFw.jpeg"]
     },
     musculosa: {
-      nombre: "Remera Oversize Negra",
+      nombre: "Musculosa Brutorius",
       precio: "$15.000",
       material: "Algodón peinado",
       detalles: "Estampa al frente, sisas amplias",
