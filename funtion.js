@@ -42,7 +42,7 @@ const productos = {
       imagenes: ["https://imgur.com/NOh6Txr.jpeg", "https://imgur.com/ShtxLuP.jpeg"]
     },
     gorra: {
-      nombre: "Gorra Negra Brutorius",
+      nombre: "a",
       precio: "$12.000",
       material: "Algodón con broche ajustable",
       detalles: "Logo bordado al frente",
